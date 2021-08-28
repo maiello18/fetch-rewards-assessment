@@ -4,7 +4,7 @@
 1. Have Node installed. Any recent version should be sufficient. Docs/Installer (https://nodejs.org/en/download/)
 1.5 Have Postman (or any other tool/browswer where you can fire off the HTTP request to the backend). Postman download (https://www.postman.com/)
 2. Clone the repo (https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
-3. cd (change directory) into the cloned repo
+3. cd (change directory) into the cloned repo into the backend folder
 4. Install the dependencies by running ```npm install```
 5. Start the server by running ```npm start```
 6. Now the server should be running and listening for requests
