@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "abdbc001-387d-4be6-824d-91b2d2d37103",
+		"name": "fetch rewards",
+		"description": "Example requests for my Fetch Rewards coding assessment . ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Transaction #1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"payer\": \"DANNON\", \"points\": 1000, \"timestamp\": \"2020-11-02T14:00:00Z\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/v1/fetch/users/1/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"fetch",
+						"users",
+						"1",
+						"transaction"
+					]
+				},
+				"description": "This request adds a transaction to a given user's data store. In doing so it updates the data store as well.\n\nThe user is dictated by the id url parameter. If no user exists with the given id exists, one is created. This is to keep this exercise simple and concise.\n\nIf the transaction would overdraft (ie cause the point balance to dip below zero) then the operation stops, and an error status message is sent back."
+			},
+			"response": []
+		},
+		{
+			"name": "Add Transaction #2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"payer\": \"DANNON\", \"points\": 300, \"timestamp\": \"2020-10-31T10:00:00Z\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/v1/fetch/users/1/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"fetch",
+						"users",
+						"1",
+						"transaction"
+					]
+				},
+				"description": "This request adds a transaction to a given user's data store. In doing so it updates the data store as well.\n\nThe user is dictated by the id url parameter. If no user exists with the given id exists, one is created. This is to keep this exercise simple and concise."
+			},
+			"response": []
+		},
+		{
+			"name": "Add Transaction #3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"payer\": \"UNILEVER\", \"points\": 200, \"timestamp\": \"2020-10-31T11:00:00Z\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/v1/fetch/users/1/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"fetch",
+						"users",
+						"1",
+						"transaction"
+					]
+				},
+				"description": "This request adds a transaction to a given user's data store. In doing so it updates the data store as well.\n\nThe user is dictated by the id url parameter. If no user exists with the given id exists, one is created. This is to keep this exercise simple and concise."
+			},
+			"response": []
+		},
+		{
+			"name": "Add Transaction #4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"payer\": \"MILLER COORS\", \"points\": 10000, \"timestamp\": \"2020-11-01T14:00:00Z\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/v1/fetch/users/1/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"fetch",
+						"users",
+						"1",
+						"transaction"
+					]
+				},
+				"description": "This request adds a transaction to a given user's data store. In doing so it updates the data store as well.\n\nThe user is dictated by the id url parameter. If no user exists with the given id exists, one is created. This is to keep this exercise simple and concise."
+			},
+			"response": []
+		},
+		{
+			"name": "Add Transaction #5 - Negative Point Value",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"payer\": \"DANNON\", \"points\": -200, \"timestamp\": \"2020-10-31T15:00:00Z\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/v1/fetch/users/1/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"fetch",
+						"users",
+						"1",
+						"transaction"
+					]
+				},
+				"description": "This request adds a transaction to a given user's data store. In doing so it updates the data store as well.\n\nThe user is dictated by the id url parameter. If no user exists with the given id exists, one is created. This is to keep this exercise simple and concise."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Balances",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/v1/fetch/users/1/balances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"fetch",
+						"users",
+						"1",
+						"balances"
+					]
+				},
+				"description": "This request gets the payer balances for a given user.\n\nThe user is dictated by the id url parameter. \n\nReturns error message if user with the given id does not exist."
+			},
+			"response": []
+		},
+		{
+			"name": "Spend Points",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"points\": 5000 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/v1/fetch/users/1/spend",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"fetch",
+						"users",
+						"1",
+						"spend"
+					]
+				},
+				"description": "This request effectively 'spends' points. The points to spend are dictated by the \"points\" field in the JSON field passed in the body of the request. \n\nThe user for which points are spent is dictated by the id url parameter. \n\nReturns error message if user with the given id does not exist."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
